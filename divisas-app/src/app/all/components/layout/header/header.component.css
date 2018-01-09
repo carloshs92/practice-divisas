@@ -1,0 +1,32 @@
+.header_logo {
+  background: #ccc;
+  border-radius: 50%;
+  height: 80px;
+  margin: 10px auto;
+  width: 80px; }
+
+.header_nav {
+  margin: 10px auto;
+  min-width: 300px;
+  max-width: 800px;
+  width: calc(100% - 150px); }
+
+.b-main-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  padding: 20px 0 0 0; }
+  .b-main-options_item {
+    background: #ccc;
+    border-radius: 5px;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    height: 30px; }

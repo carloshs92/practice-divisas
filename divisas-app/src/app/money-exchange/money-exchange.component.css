@@ -1,0 +1,27 @@
+.section {
+  background: #e3e3e3;
+  height: calc(80vh - 200px);
+  min-height: 300px;
+  padding-top: 50px;
+  position: relative; }
+  .section:before {
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 3px 4px 0 rgba(0, 0, 0, 0.12);
+    content: "";
+    height: 4px;
+    position: absolute;
+    top: -4px;
+    width: 100%; }
+
+.row {
+  height: 100px; }
+
+.col {
+  padding: 0 35px; }
+  .col_input-form {
+    height: 35px;
+    text-align: center;
+    width: 100%; }
+  .col_btn {
+    display: block;
+    margin: 0 auto;
+    width: 50%; }
