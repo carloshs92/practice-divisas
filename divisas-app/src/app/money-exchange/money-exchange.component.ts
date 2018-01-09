@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ExchangeService} from "../all/services/exchange.service";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-money-exchange',
@@ -7,9 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoneyExchangeComponent implements OnInit {
 
-  constructor() { }
+  exchangeForm: FormGroup;
+
+  constructor(
+    private exchangeService: ExchangeService,
+    private formBuilder: FormBuilder) {
+
+    this.exchangeForm = this.formBuilder.group({
+      base: ['', [
+        Validators.required,
+        Validators.maxLength(2)
+      ]],
+      result: ['', [
+        Validators.required,
+        Validators.maxLength(2)
+      ]]
+    });
+
+  }
+
+  calculateExchange() {
+    this.exchangeService.getExchanges(["base=USD", "symbols=EUR"])
+      .subscribe(
+        response => {
+          console.log(response);
+        }
+      )
+  }
 
   ngOnInit() {
+
   }
 
 }

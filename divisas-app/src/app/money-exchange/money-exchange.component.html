@@ -1,17 +1,17 @@
 <section class="section">
-  <div class="container">
+  <form class="container" (ngSubmit)="calculateExchange()" [formGroup]="exchangeForm">
     <div class="row align-items-center">
       <div class="col">
-        <input type="text" class="col_input-form"  placeholder="USD"/>
+        <input type="text" class="col_input-form"  placeholder="USD" formControlName="base"/>
       </div>
       <div class="col">
-        <input type="text" class="col_input-form" placeholder="EU" disabled/>
+        <input type="text" class="col_input-form" placeholder="EU" disabled formControlName="result"/>
       </div>
     </div>
     <div class="row align-items-center">
       <div class="col">
-        <a class="btn btn-lg btn-success col_btn" href="#" role="button">Calculate</a>
+        <button class="btn btn-lg btn-success col_btn" role="button">Calculate</button>
       </div>
     </div>
-  </div>
+  </form>
 </section>
