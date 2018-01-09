@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ExchangeService} from "../all/services/exchange.service";
+import {ExchangeService} from "../../all/services/exchange.service";
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {createNumberMask} from "text-mask-addons/dist/textMaskAddons";
 
@@ -36,12 +36,10 @@ export class MoneyExchangeComponent implements OnInit {
     this.exchangeService.getExchanges(["base=USD", `symbols=${key}`])
       .subscribe(
         response => {
-          console.log(response);
           let rate, base, result;
           rate = parseFloat(response.rates[key]);
           base = parseFloat(this.exchangeForm.get("base").value.split(" ")[1].split(",").join(""));
           result = base*rate;
-          console.log(base, this.exchangeForm.get("base").value);
           this.exchangeForm.get("rate").setValue(result);
         }
       )

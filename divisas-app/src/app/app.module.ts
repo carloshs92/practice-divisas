@@ -7,12 +7,13 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './all/components/layout/layout.component';
 import { FooterComponent } from './all/components/layout/footer/footer.component';
 import { HeaderComponent } from './all/components/layout/header/header.component';
-import { MoneyExchangeComponent } from './money-exchange/money-exchange.component';
+import { MoneyExchangeComponent } from './index/money-exchange/money-exchange.component';
 import {ExchangeService} from "./all/services/exchange.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {TextMaskModule} from "angular2-text-mask";
-import { HistoricPriceComponent } from './historic-price/historic-price.component';
+import { HistoricPriceComponent } from './index/historic-price/historic-price.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HistoricPriceComponent } from './historic-price/historic-price.componen
     FooterComponent,
     HeaderComponent,
     MoneyExchangeComponent,
-    HistoricPriceComponent
+    HistoricPriceComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
