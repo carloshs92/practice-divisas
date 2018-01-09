@@ -11,6 +11,8 @@ import { MoneyExchangeComponent } from './money-exchange/money-exchange.componen
 import {ExchangeService} from "./all/services/exchange.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {TextMaskModule} from "angular2-text-mask";
+import { HistoricPriceComponent } from './historic-price/historic-price.component';
 
 @NgModule({
   declarations: [
@@ -18,14 +20,16 @@ import {HttpClientModule} from "@angular/common/http";
     LayoutComponent,
     FooterComponent,
     HeaderComponent,
-    MoneyExchangeComponent
+    MoneyExchangeComponent,
+    HistoricPriceComponent
   ],
   imports: [
     BrowserModule,
     appRouting,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TextMaskModule
   ],
   providers: [ExchangeService],
   bootstrap: [AppComponent]

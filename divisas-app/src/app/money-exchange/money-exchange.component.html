@@ -2,10 +2,10 @@
   <form class="container" (ngSubmit)="calculateExchange()" [formGroup]="exchangeForm">
     <div class="row align-items-center">
       <div class="col">
-        <input type="text" class="col_input-form"  placeholder="USD" formControlName="base"/>
+        <input type="text" [textMask]="{mask: mask['USD']}" class="col_input-form"  placeholder="USD" formControlName="base" (keyup)="clearRate()"/>
       </div>
       <div class="col">
-        <input type="text" class="col_input-form" placeholder="EU" disabled formControlName="result"/>
+        <input type="text" [textMask]="{mask: mask['EUR']}" class="col_input-form" placeholder="EU" disabled formControlName="rate"/>
       </div>
     </div>
     <div class="row align-items-center">
